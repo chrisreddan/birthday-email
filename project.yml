@@ -1,0 +1,5 @@
+packages:
+  - name: email
+    actions:
+      - name: birthday
+        runtime: 'python:default'
