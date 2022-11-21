@@ -1,6 +1,6 @@
 packages:
   - name: email
-    actions:
+    functions:
       - name: birthday
         runtime: 'python:default'
         triggers:
