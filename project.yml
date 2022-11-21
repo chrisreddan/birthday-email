@@ -3,3 +3,8 @@ packages:
     actions:
       - name: birthday
         runtime: 'python:default'
+        triggers:
+          - name: 'email-trigger'
+            sourceType: scheduler
+            sourceDetails:
+              cron: '0/2 * * * *'
