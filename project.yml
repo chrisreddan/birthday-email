@@ -1,0 +1,10 @@
+packages:
+  - name: birthday
+    functions:
+      - name: email
+        runtime: 'python:default'
+        triggers:
+          - name: 'birthday-email-trigger'
+            sourceType: scheduler
+            sourceDetails:
+              cron: '0/2 * * * *'
