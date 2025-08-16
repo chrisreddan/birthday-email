@@ -30,10 +30,7 @@ def main(args):
         try:
             email_from = os.getenv("EMAIL_FROM")
             api_token = os.getenv("POSTMARK_API_TOKEN")
-            logging.error(f"Sending email to {email_to}")
-            logging.error(f"Token = {api_token}")
             postmark = PostmarkClient(api_token)
             postmark.emails.send(From=email_from, To=email_to, Subject='Happy Birthday!', HtmlBody=email_body)
-            logging.info("Email sent")
         except Exception as e:
             logging.error(f"Error running process: {e}")
